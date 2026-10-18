@@ -114,42 +114,32 @@
             <h2>Selected work and creative highlights.</h2>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-visual visual-one"></div>
-              <div class="project-body">
-                <span class="tag">Brand Experience</span>
-                <h3>Northstar Studio</h3>
-                <p>
-                  A boutique studio identity system and web presence designed to help
-                  a creative team present a more premium, memorable brand.
-                </p>
-              </div>
-            </article>
+          <div class="project-grid" id="project-grid">
+            <!-- Projects will be loaded here dynamically from projects.json and localStorage -->
+          </div>
 
-            <article class="project-card">
-              <div class="project-visual visual-two"></div>
-              <div class="project-body">
-                <span class="tag">Product Design</span>
-                <h3>Bloom Plan</h3>
-                <p>
-                  A personal planning dashboard that simplified daily decision-making
-                  with calming visuals, clean structure, and efficient interactions.
-                </p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-visual visual-three"></div>
-              <div class="project-body">
-                <span class="tag">Web Development</span>
-                <h3>Horizon Launch</h3>
-                <p>
-                  A campaign landing page built to convert interest into action,
-                  balancing storytelling, clarity, and visual momentum.
-                </p>
-              </div>
-            </article>
+          <!-- Simple admin form for adding recent projects locally
+               - Saves to browser localStorage (no server required)
+               - Export button copies the full JSON so you can paste it into projects.json in the repo
+          -->
+          <div class="admin-panel">
+            <details>
+              <summary>Add / Manage Projects (local only)</summary>
+              <form id="project-form" class="project-form">
+                <div class="form-row">
+                  <label>Title<input type="text" name="title" required /></label>
+                  <label>Category<input type="text" name="category" /></label>
+                </div>
+                <label>Description<textarea name="description" rows="3"></textarea></label>
+                <label>Link (full URL)<input type="url" name="link" placeholder="https://your-website.example" /></label>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Add project</button>
+                  <button type="button" id="export-json" class="btn btn-secondary">Export JSON</button>
+                  <button type="button" id="clear-local" class="btn">Clear local</button>
+                </div>
+                <p class="admin-note">Note: Adding here only stores projects in your browser. Use "Export JSON" to copy the combined list so you can update <code>projects.json</code> in this repo.</p>
+              </form>
+            </details>
           </div>
         </div>
       </section>
@@ -199,253 +189,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
